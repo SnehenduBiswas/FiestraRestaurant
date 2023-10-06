@@ -1,0 +1,219 @@
+/* Reset and Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+
+body {
+    background: #ffffff;
+    font-size: 16px;
+}
+
+.bg-image {
+    position: relative;
+}
+
+.bg-image::before {
+    content: "";
+    background-image: url('../../../public/images/Restaurant BG.jpg'); /* Relative to the "public" folder */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 85%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+/* Navbar Styles */
+
+.navbar-top {
+    background-color: #a12f2f;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #000000;
+}
+
+.navbar-bottom {
+    background-color: #000000;
+    color: #ffee02;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 15px 30px 15px 30px;
+    border-top: 2px solid #a19f9d;
+}
+
+.nav-bottom-left {
+    text-align: left;
+    font-family: Brush Script MT;
+    font-size: 45px;
+    flex-grow: 1;
+}
+
+.nav-bottom-left-subtext {
+    text-align: left;
+    color: #eeebbb;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 15px;
+    flex-grow: 1;
+}
+
+.nav-bottom-center {
+    text-align: center;
+    font-family: Rockwell;
+    text-transform: uppercase;
+    font-size: 20px;
+    flex-grow: 1;
+}
+.nav-bottom-right {
+    text-align: right;
+    font-family: MV Boli;
+    font-size: 20px;
+    flex-grow: 1;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn-group__item {
+    background-color: #01080f;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-group__item:hover {
+    background-color: #00b35a;
+}
+
+/* Menu Card Styles */
+
+.main-card--container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    padding: 75px;
+}
+
+.card-container {
+    background-color: #e4daaf;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card {
+    padding: 20px;
+}
+
+.card-body {
+    display: inline-block;
+}
+
+.card-number {
+    background-color: #000000;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-author {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    color: #e76107;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.card-read {
+    font-size: 14px;
+    font-weight: bold;
+    color: #007bff;
+    padding: 1% 0% 1% 0%;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.card-read:hover {
+    color: #0056b3;
+}
+
+.card-tag {
+    background-color: #378612;
+    color: #fff;
+    display: inline-block;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.card-tag:hover {
+    background-color: #014604;
+}
+
+.card-media {
+    border-radius: 10px;
+    width: 100%; 
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .main-card--container {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
