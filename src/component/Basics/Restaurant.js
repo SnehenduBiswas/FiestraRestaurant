@@ -62,7 +62,7 @@ const Restaurant = () => {
             <nav className="navbar-bottom">
                 <div className="nav-bottom-left">
                     Fiestra
-                    <div className="nav-bottom-left-subtext">A Premium Restaurant</div>
+                    <div className="nav-bottom-left-subtext">A Premium Cafe</div>
                 </div>
                 <div className="nav-bottom-center">
                     Location : <br /> Esplanade, Kolkata
