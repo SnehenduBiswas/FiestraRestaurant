@@ -1,3 +1,3 @@
 # FiestraRestaurant
 
-Link: https://fiestra-restaurant.netlify.app/
+Link: https://fiestra-cafe.netlify.app/
